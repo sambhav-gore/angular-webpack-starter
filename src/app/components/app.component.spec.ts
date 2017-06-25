@@ -1,5 +1,6 @@
 import {TestBed, ComponentFixture} from "@angular/core/testing";
 import {AppComponent} from "./app.component";
+import {MaterialModule, MdToolbarModule, MdButtonModule, MdCardModule} from "@angular/material";
 
 describe("AppComponent", () => {
     let fixture: ComponentFixture<AppComponent>;
@@ -23,6 +24,11 @@ describe("AppComponent", () => {
 
     function configureModule(): void {
         TestBed.configureTestingModule({
+            imports: [
+                MdToolbarModule,
+                MdButtonModule,
+                MdCardModule
+            ],
             declarations: [AppComponent]
         });
     }

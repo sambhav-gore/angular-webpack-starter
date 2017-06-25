@@ -1,6 +1,5 @@
 const path = require('path');
 
-const autoprefixer = require('autoprefixer');
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
@@ -87,9 +86,6 @@ config.plugins = [
     debug: false,
     minimize: ENV_PRODUCTION,
     options: {
-      postcss: [
-        autoprefixer({browsers: ['last 3 versions']})
-      ],
       sassLoader: {
         outputStyle: 'compressed',
         precision: 10,
