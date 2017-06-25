@@ -1,5 +1,34 @@
+import {TestBed, ComponentFixture} from "@angular/core/testing";
+import {AppComponent} from "./app.component";
+
 describe("AppComponent", () => {
-    it("should pass", () => {
-        expect(true).toBe(true);
+    let fixture: ComponentFixture<AppComponent>;
+    let component: AppComponent;
+
+    beforeEach(() => {
+        configureModule();
+        createComponent();
     });
+
+    it("should be defined", () => {
+        expect(component).toBeDefined();
+    });
+
+    describe("on init", () => {
+       it("should set the foo value", () => {
+          component.ngOnInit();
+          expect(component.foo).toEqual("baz");
+       });
+    });
+
+    function configureModule(): void {
+        TestBed.configureTestingModule({
+            declarations: [AppComponent]
+        });
+    }
+
+    function createComponent(): void {
+        fixture = TestBed.createComponent(AppComponent);
+        component = fixture.componentInstance;
+    }
 });
