@@ -1,31 +1,31 @@
-##Starter Angular Application
+## Starter Angular Application
 Angular + Webpack + Karma + Firebase
 
 This stater has basic setup for building angular app with webpack and unit tests inJasmine Karma
 
-###Installing
+### Installing
 1. Clone this repo
 2. Run `$ npm install`
 3. Run `$ typings install`
 
-###Scripts
+### Scripts
 
-####Test
+#### Test
 ```shell
 $ npm run test
 ```
 
-####Build
+#### Build
 ```shell
 $ npm run build
 ```
 
-####Dev Server
+#### Dev Server
 ```shell
 $ npm run server:dev
 ```
 
-####Deploy
+#### Deploy
 Note: Enter Firebase app-id in .firebaserc file
 ```shell
 $ npm run build
